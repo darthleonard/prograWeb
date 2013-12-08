@@ -34,9 +34,7 @@ if($oBD->a_conexion!=null){
 		</td>
 		<td>
 			<?
-				// obtiene la direccion actual
 				$url="http://".$_SERVER['HTTP_HOST']."".$_SERVER['REQUEST_URI'];
-				// se agrega tablero de comentarios de facebook
 				$fb->doCommentDiv($url);
 			?>
 		</td>

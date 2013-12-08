@@ -6,6 +6,7 @@ require('MsjMngr.php');
 if(isset($_SESSION['usuario'])){
 	$o_html = new doHTML();
 	$o_html->doHTMLHeader("Mensajes");
+
 	$mm = new ManejadorMensajes();
 ?>
 	<table class='tabla1'>

@@ -10,7 +10,6 @@ if(isset($_SESSION['usuario'])){
 	}
 
 	$o_mm = new manejadorMensajes();
-	// validar que el destinatario exista
 	if($o_mm->validaUsuario($_REQUEST['usr'])){
 		$o_mm->enviarNuevo();
 	}else{

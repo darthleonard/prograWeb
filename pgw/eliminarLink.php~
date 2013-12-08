@@ -3,7 +3,7 @@ session_start();
 require_once('LinkMngr.php');
 if(isset($_SESSION['usuario'])){
 
-	// verificar que se haya seleccionado algun elemento
+	// verificar que sse haya seleccionado algun elemento
 	if(isset($_REQUEST['linkID'])){
 		// recorrer el arreglo
 		foreach($_REQUEST['linkID'] as $id){
