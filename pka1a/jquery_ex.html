@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>JQuery</title>
+	<script src='jquery_1.4.1.js'></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	$(document).ready(
+		function(){
+			$('#equis').click(
+				function(){
+					$('#datos').fadeOut(1000)
+					$('#equis').hide();
+					$('#ver').show(1000);
+				}
+			); // fin de la funcion en equis
+			$('#ver').click(
+				function(){
+					$('#datos').fadeIn(1000)
+					$('#ver').hide();
+					$('#equis').show(1000);
+				}
+			); // fin de la funcion en equis
+		} // fin de la primera funcion
+	); // fin de la funcion ready
+</script>
+
+<!--	<div id='datos' style='position:absolute;left:0px;top:0px;width:200;height:300px;'>	-->
+<div id='datos'>
+IRON MAIDEN
+</div>
+<div id='equis'>
+X
+</div>
+<div id='ver' >
+O
+</div>
+
+</body>
