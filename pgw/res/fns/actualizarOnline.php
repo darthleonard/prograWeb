@@ -3,7 +3,6 @@ session_start();
 require('fnsBD.php');
 $oBD=new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
 if($oBD->a_conexion!=null){
-	//$oBD->m_seleBD('ppw');
 	$cad = "select * from usuario";
 	$oBD->m_consulta($cad);
 	if($oBD->a_bandError)
