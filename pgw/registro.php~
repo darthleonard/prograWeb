@@ -11,9 +11,10 @@ if($_REQUEST['nom'] > '')
 			if($_REQUEST['pass'] > '')
 				if($_REQUEST['pass'] == $_REQUEST['passCmp'])
 					if(preg_match("/^[[:digit:]]+$/", $_REQUEST['edad']) && $_REQUEST['edad']>'')
-						if($_REQUEST['usr'])
+						if($_REQUEST['usr']){
+							$flag=false;
 							registra();
-						else
+						}else
 							rechazarRegistro(1,'usuario');	
 					else
 						rechazarRegistro(1,'edad');

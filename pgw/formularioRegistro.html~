@@ -31,12 +31,12 @@
 			</tr>
 			<tr>
 				<td align='right'>contrase&ntilde;a&nbsp;</td>
-				<td align='left'><input type=password maxlength="20" name=pass></td>
+				<td align='left'><input type=password maxlength="20" name=pass value='1'></td>
 				<td><h3>maximo de<br>caracteres: 20</h3></td>
 			</tr>
 			<tr>
 				<td align='right'>repite contrase&ntilde;a&nbsp;</td>
-				<td align='left'><input type=password name=passCmp></td>
+				<td align='left'><input type=password name=passCmp value='1'></td>
 			</tr>
 			<tr>
 				<td align='right'>edad&nbsp;</td>

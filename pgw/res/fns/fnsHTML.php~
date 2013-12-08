@@ -31,8 +31,7 @@ class doHTML{
 
 	function doMainMenu(){
 		$this->header();
-		echo "
-	<ul id='tabnav'>
+		echo "<ul id='tabnav'>
 	<li class='tab1'><a href='home.php'>Home</a></li>
 	<li class='tab2'><a href='links.php'>Links</a></li>
 	<li class='tab3'><a href='mensajes.php'>Mensajes</a></li>
