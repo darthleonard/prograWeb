@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//ES">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<title>DBZ</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+function m_checaDatos(p_form){
+	var patronMail = /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
+	var patronNum = /^(?:\+|-)?\d+$/;
+/*	if(p_form.nom.value > '')
+		if(p_form.ape.value > '')
+			if(p_form.mail.value > '' && p_form.mail.value.match(patronMail))
+				if(p_form.pass.value > '')
+					if(p_form.pass.value == p_form.passCmp.value)
+						if(p_form.edad.value.match(patronNum))*/
+							alert('redireccionar');
+							//window.locationf="http://www.google.com";
+							
+							document.location.href='www.google.com';
+/*						else{
+							alert('edad no valida');
+							return false;
+						}
+					else{
+						alert('Las contraseñas no coinciden');
+						return false;
+					}
+				else{
+					alert('Error en el campo contraseña');
+					return false;
+				}
+			else{
+				alert('El correo no es apropiado');
+				return false;
+			}
+		else{
+			alert('campo apellido o valido');
+			return false;
+			}
+	else{
+		alert('Campo nombre no valido')
+		return false;
+	}*/
+}
+</script>
+
+	
+<center><img src='res/img/logo.png' width=150></center>
+	
+<!-- <form onSubmit='return m_checaDatos(this)' method='post'> -->
+<form action='registro.php' method='post'>
+	<fieldset>
+		<legend>Formulario de Registro</legend>
+		<table border=0 align=center>
+			<tr>
+				<td align='right'>nombre&nbsp;</td>
+				<td align='left'><input type=text name=nom></td>
+			</tr>
+			<tr>
+				<td align='right'>usuario&nbsp;</td>
+				<td align='left'><input type=text name=usr></td>
+			</tr>
+			<tr>
+				<td align='right'>contrase&ntilde;a&nbsp;</td>
+				<td align='left'><input type=password name=pass></td>
+			</tr>
+			<tr>
+				<td align='right'>repite contrase&ntilde;a&nbsp;</td>
+				<td align='left'><input type=password name=passCmp></td>
+			</tr>
+			<tr>
+				<td align='right'>apellido&nbsp;</td>
+				<td align='left'><input type=text name=ape></td>
+			</tr>
+			<tr>
+				<td align='right'>edad&nbsp;</td>
+				<td align='left'><input type=text name=edad></td>
+			</tr>
+			<tr>
+				<td align='right'>correo&nbsp;</td>
+				<td align='left'><input type=text name=mail></td>
+			</tr>
+			<tr>
+				<td align='right' colspan=2>
+					<input type='submit' value='Enviar' onClick='return confirm("Los datos son correctos?")'>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+</form>	
+
+</body>
+</html>

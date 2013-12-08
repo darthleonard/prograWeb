@@ -1,0 +1,148 @@
+* {
+	font-family: Arial;	
+}
+
+body{
+	/*background-image: url("../img/fondo.png");
+	background-repeat: repeat-y;
+	background-attachment: fixe;
+	/*background-position: left bottom;*/
+	padding: 0 0 0 0;
+	background-color: #EEFFEC;
+}
+
+h1, h2, h3 {
+	color: #6c6;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1em;
+}
+
+h3 {
+	font-size: .5em;
+}
+
+descripcionLink {
+	font-size: 0.8em;
+	color: #005000;
+}
+
+p {
+	color: gray;
+	font-family:
+	Verdana;
+	font-size: medium;
+}
+
+p jaja {
+	color: yellow;
+}
+
+/*a {
+	text-decoration: none;
+}*/
+
+a:hover {
+	text-decoration: none;
+}
+
+.destacado{
+	color: red;
+}
+
+.aviso {
+	padding: 0.5em;
+	border: 1px solid #98be10;
+	background: #f6feda;
+}
+
+alerta {
+	padding: 0.5em;
+	border: 1px solid #98be10;
+	background: #f6feda;
+}
+
+error {
+	text-align: center;
+	padding: 1.0ex;
+	border: 3px ridge red;
+	background: #FF7070;
+	color: #C00000;
+	font-weight: bold;
+}
+
+/* TABLAS */
+.tabla1 {
+	width: 100%;
+	border: 0px solid #000;
+	border-collapse: collapse;
+}
+
+/*.tabla1 th, .tabla1 td {
+	border: 1px solid #000;
+}*/
+/*
+table tr:hover {
+	background: #FFFF66;
+}
+*/
+/* FORMULARIO */
+input:focus {
+	border: 2px solid #000;
+	background: #F3F3F3;
+}
+
+
+form.elegante input {
+	padding: .2em;
+}
+
+label {
+	display: block;
+	margin: .5em 0 0 0;
+}
+
+.btn {
+	display: block;
+	margin: 1em 0;
+}
+
+.imgBanner {
+	width: 100%;
+	height: 75px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.Chat {
+	padding: 5px;
+	border: 1px solid #98be10;
+	background: #f6feda;
+	position:fixed;
+	left: 0;
+	bottom: 0;	
+}
+
+.Contenido{
+	overflow: auto;
+/*	line-height: 0px;
+/*	width: 50%;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-left: 30px;
+	margin-right: 30px;
+
+	/*
+	overflow-x: auto; /*Horizontal scrollbar*/
+        /*-ms-overflow-x: auto; /*IE 8 horizontal scrollbar*/
+ 
+        /*overflow-y: auto; /*Verical scrollbar*/
+        /*-ms-overflow-y: auto; /*IE 8 vertical scrollbar*/
+}
