@@ -1,0 +1,56 @@
+<script language="javascript" type="text/javascript">
+  var RequestObject = false;
+
+  // el tiempo X que tardará en actualizarse 
+  window.setInterval("actualizacion_reloj()", 100);
+
+  if (window.XMLHttpRequest) RequestObject = new XMLHttpRequest();
+  if (window.ActiveXObject) RequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+
+  function ReqChange() { 
+  // Si se ha recibido la información correctamente
+    if (RequestObject.readyState==4) {
+     // si la información es válida 
+     if (RequestObject.responseText.indexOf('invalid') == -1) {
+     // Buscamos la div con id online 
+       document.getElementById("online").innerHTML = RequestObject.responseText;
+     } else { 
+      // Por si hay algun error document.getElementById("online").innerHTML = "Error llamando"; 
+     }
+    } 
+  }
+
+  function llamadaAjax() {
+        // Mensaje a mostrar mientras se obtiene la información remota...
+    document.getElementById("online").innerHTML = ""; 
+    // Preparamos la obtención de datos
+    RequestObject.open("GET", 'http://localhost/ex/ajax.php?n='+Math.random() , true);
+    RequestObject.onreadystatechange = ReqChange; 
+    // Enviamos
+    RequestObject.send(null);
+  }
+
+  function actualizacion_reloj() {
+   llamadaAjax();
+ }
+</script>
+<h2>
+        Usuarios Online</h2>
+<div id="online"></div>
+
+<br><br>
+
+<form>
+		<fieldset>
+			<legend>Alta en el servicio</legend>
+			<label for="nombre">Nombre</label>
+			<input type="text" id="nombre" />
+			<label for="apellidos">Apellidos</label>
+			<input type="text" id="apellidos" size="50" />
+			<label for="dni">DNI</label>
+			<input type="text" id="dni" size="10" 		maxlength="9" />
+			<label for="contraseña">Contraseña</label>
+			<input type="password" id="contrasena" />
+			<input class="btn" type="submit" value="Darme de alta" />
+		</fieldset>
+	</form>

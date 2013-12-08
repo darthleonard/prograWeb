@@ -1,0 +1,33 @@
+<?php
+class doHTML{
+	// Imprimir cabeceras de html
+	function doHTMLHeader($titulo){
+		echo "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//ES'>
+<html>
+<head>
+	<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+	<title>DBZ - $titulo</title>
+	<link rel='stylesheet' type='text/css' href='res/css/estilos.css' media='all' />
+</head>
+<body>
+";
+	} // Fin de funcion doHTMLHeader
+
+	// Imprime el nombre de usuario al principio de la pagina
+	function header(){
+		$usuario='Anonimo';
+		if(isset($_SESSION['usuario']))
+			$usuario = $_SESSION['usuario'];
+
+		?><h1>Bienvenido: <?php echo $usuario ."!"; ?></h1><?php
+	}
+
+	// Imprimir pie de pagina
+	function doHTMLFooter(){
+		echo "
+</body>
+</html>";
+	} // Fin de funcion doHTMLFooter
+}
+
+?>
