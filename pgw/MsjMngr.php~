@@ -11,7 +11,7 @@ class manejadorMensajes {
 	 *  return true: si existe | false si no existe
 	 */
 	function validaUsuario($usrTg){
-		$o_bd = new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD'], $_SESSION['nombreBD']);
+		$o_bd = new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
 		$o_bd->m_seleBD('ppw');
 		$query = "select * from usuario where usr='". $usrTg ."'";
 		$o_bd->m_consulta($query);
@@ -28,7 +28,7 @@ class manejadorMensajes {
 
 	// Metodo para enviar un nuevo mensaje
 	function enviarNuevo(){
-		$o_bd = new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD'], $_SESSION['nombreBD']);
+		$o_bd = new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
 		$o_bd->m_seleBD('ppw');
 
 		// obtener el id del usuario que envia el mensaje
@@ -59,7 +59,7 @@ class manejadorMensajes {
 	 * $id -> el id del Mensaje que sera eliminado
 	 */
 	function eliminarMensaje($id){
-		$o_bd = new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD'], $_SESSION['nombreBD']);
+		$o_bd = new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
 		$query = "delete from Mensaje where id = ". $id;
 		//echo $query ."<br>";
 		$o_bd->m_consulta($query);

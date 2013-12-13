@@ -17,7 +17,7 @@ class Buscador {
 		if($_REQUEST['bsc'] != ""){
 			echo "Resultados para: <b>". $_REQUEST['bsc'] . "</b><br><hr>";
 	
-			$o_bd = new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
+			$o_bd = new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD'], $_SESSION['nombreBD']);
 			$o_bd->m_seleBD('ppw');
 			$query = "select l.link, l.tags, u.usr from Link as l join usuario as u on l.id_usr=u.id where tags LIKE '%". $_REQUEST['bsc'] ."%' and id_tipoInfo=1";
 

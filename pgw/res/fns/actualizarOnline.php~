@@ -1,7 +1,7 @@
 <?php
 session_start();
 require('fnsBD.php');
-$oBD=new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD'], $_SESSION['nombreBD']);
+$oBD=new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
 if($oBD->a_conexion!=null){
 	$cad = "select * from usuario";
 	$oBD->m_consulta($cad);

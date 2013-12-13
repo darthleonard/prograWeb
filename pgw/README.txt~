@@ -1,0 +1,33 @@
+INSTITUTO TECNOLOGICO DE CELAYA
+
+Proyecto de Programacion Web
+domingo 8 de Diciembre de 2013
+
+Alumno: Gonzalez Caracoza Leonardo
+Profesor: Francisco Guiterrez Vera
+
+Instrucciones de instalacion:
+	1.- Descomprimir el archivo en alguna carpeta dentro de los
+	    directorios de servidor.
+	2.- Ejecutar el archivo "instalador.php".
+	3.- Ingresar los datos solicitados.
+		a) Archivo SQL que contiene las consultas para
+		   crear las tablas de la base de datos.
+		b) Nombre de un usuario de MySQL que tenga
+		   privilegios para crear y modificar bases de
+		   datos.
+		c) Contraseña del usuario de MySQL
+		d) Nombre/direccion del servidor en el que sera
+		   instalado el sitio web.
+		e) Nombre de la base de datos, esta opcion esta
+		   desactivada...
+
+
+Este comprimido contiene:
+	1.- Carpeta pgw.
+		i) Instalador.
+		ii) Archivos fuente necesarios para el correcto funcionamiento del sitio.
+	2.- ppw.sql: Archivo de respaldo de la base de datos.
+	3.- README: Informacion e instrucciones.
+
+La documentacion del sitio fue entregada en un documento aparte.

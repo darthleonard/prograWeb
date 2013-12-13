@@ -15,7 +15,7 @@ for(i=0;i<q.length;i++){
 
 <script language="JavaScript" type="text/javascript">
 
-var pagina= <?php echo '"'.$_REQUEST['p'].'";'; ?>
+var pagina=<?php echo $_REQUEST['p']; ?>
 function redireccionar() 
 {
 location.href=pagina

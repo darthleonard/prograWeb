@@ -32,13 +32,13 @@ else
  * funcion para registrar un usuario
  */
 function registra(){
-	$v_lineas=file("res/pjinfo/cnf.php");
+	$v_lineas=file("../cnf.php");
 	for($v_indice=1; $v_indice<count($v_lineas)-1; $v_indice++){
 		$v_datos=explode('%',$v_lineas[$v_indice]);
 		$_SESSION[$v_datos[0]] = $v_datos[1];
 	}
 	
-	$oBD=new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
+	$oBD=new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD'], $_SESSION['nombreBD']);
 	if($oBD->a_conexion!=null){
 		// validar el nombre de usuario
 		if(validaUsuario($oBD,$_REQUEST['usr'])){
@@ -47,6 +47,15 @@ function registra(){
 			if($oBD->a_bandError){
 				rechazarRegistro(-1, $oBD->a_mensError);
 			}else{
+				$id_tmp = 0;
+				$cad = "select id form usuario where usr='". $_REQUEST['usr'] ."')";
+				$oBD->m_consulta($cad);
+				if($oBD->a_numRegistros==1){
+					$renglon=mysql_fetch_object($oBD->a_resuConsulta);
+					$id_tmp = $renglon->id;
+				}
+				$cad = "insert into Registro(id_usr) values(".$id_tmp.")";
+				$oBD->m_consulta($cad);
 				header("location: login.php?usr=". $_REQUEST['usr'] ."&pass=".$_REQUEST['pass']);
 			}
 		}

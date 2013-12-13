@@ -33,7 +33,7 @@ class bd{
 	function m_seleBD(){
 		mysql_select_db($this->a_nomBD, $this->a_conexion);
 	}
-
+	
 	// Realiza consulta en BD
 	function m_consulta($p_query){
 		$this->m_seleBD();

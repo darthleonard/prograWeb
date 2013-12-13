@@ -3,7 +3,7 @@ session_start();
 require('res/fns/fnsBD.php');
 require('destroySession.php');
 
-$oBD=new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
+$oBD=new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD'], $_SESSION['nombreBD']);
 if($oBD->a_conexion!=null){
 	// Actualizar el estado del usuario a desconectado
 	$cad="update usuario set online=0 where nombre='" .$_SESSION['usuario'] ."'";

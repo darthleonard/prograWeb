@@ -10,7 +10,7 @@ $o_html->doHTMLHeader('Perfil');
 if(isset($_SESSION['usuario'])){
 	$fb = new funcionesFace();
 
-$oBD=new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
+$oBD=new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD'], $_SESSION['nombreBD']);
 if($oBD->a_conexion!=null){
 	$cad = "select fbUser from usuario where usr='".$_SESSION['usr']."'";
 	$oBD->m_consulta($cad);

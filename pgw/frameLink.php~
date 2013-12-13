@@ -13,7 +13,7 @@ if(isset($_REQUEST['p']))
 <!-- <frameset rows=80%,* frameborder='no'>
 		<!--<frame name='trabajo' <? echo "src='abreLink.php?p=$link'";?> /></frame>-->
 		<!--<frame name='trabajo' <? echo "src='http://$link'";?> /></frame>-->
-		<center><iframe <? echo "src='http://'".$_REQUEST['p']."'"; ?> width="500" height="500"> </iframe></center>
+		<center><iframe <? echo "src='http://'".$_REQUEST['pagina']."'"; ?> width="500" height="500"> </iframe></center>
 		<!--<frame name='menu' src='menu.html' scrolling='no' /></frame>-->
 <!--</frameset>-->
 

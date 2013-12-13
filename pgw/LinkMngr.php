@@ -9,11 +9,10 @@ class ManejadorLinks {
 	 * $p_tipoInfo = 1 -> muestra los publicos
 	 */
 	function mostrarLinks($p_tipoInfo){;
-		$o_BD=new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
+		$o_BD=new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD'], $_SESSION['nombreBD']);
 		if($o_BD->a_conexion!=null){
 			$v_flagQuery;
 			$v_flagQuery=($p_tipoInfo==0)?false:true;
-			$o_BD->m_seleBD('ppw');
 			if($v_flagQuery)
 				$query = "select * from Link where id_usr=(select id from usuario where usr='". $_SESSION['usr'] ."') and id_tipoInfo=$p_tipoInfo";
 			else
@@ -66,7 +65,7 @@ class ManejadorLinks {
 
 	// Funcion para agrefar un nuevo Link
 	function enviarNuevo(){
-		$o_bd = new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
+		$o_bd = new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD'], $_SESSION['nombreBD']);
 		
 		$queryValues = "(". $_SESSION['id_usr'] .", ". $_REQUEST['tipoInfo'] .", '". $_REQUEST['newLink'] ."', '" . $_REQUEST['tags'] ."')";
 		$query = "insert into Link (id_usr, id_tipoInfo, link, tags) values " . $queryValues;
@@ -87,9 +86,8 @@ class ManejadorLinks {
 	 * $id -> el id del link que sera eliminado
 	 */
 	function eliminarLink($id){
-		$o_bd = new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
+		$o_bd = new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD'], $_SESSION['nombreBD']);
 		$query = "delete from Link where id = ". $id;
-		//echo $query ."<br>";
 		$o_bd->m_consulta($query);
 		if($o_bd->a_bandError){
 			echo "<center><error>Error " . $o_bd->a_mensError ."</error></center>";

@@ -5,7 +5,7 @@ require('destroySession.php');
 
 $oBD=new bd($_SESSION['servidorBD'], $_SESSION['usuarioBD'], $_SESSION['pwdBD']);
 if($oBD->a_conexion!=null){
-	//$oBD->m_seleBD('pka');
+	// Actualizar el estado del usuario a desconectado
 	$cad="update usuario set online=0 where nombre='" .$_SESSION['usuario'] ."'";
 	$oBD->m_consulta($cad);
 	if($oBD->a_bandError)
